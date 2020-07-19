@@ -19,7 +19,7 @@ class AddTodo extends Component {
 
   render() {
     const { details, title, text, alertShow } = this.state;
-    const { addTodo, user } = this.props;
+    const { addTodo, user, increaseTodoCount } = this.props;
     const { mail } = user;
     return (
       <Form>
@@ -80,6 +80,7 @@ class AddTodo extends Component {
             e.preventDefault();
             if (title !== '' && text !== '') {
               addTodo({ title, text, mail });
+              increaseTodoCount();
               this.setState({ alertShow: false });
             } else {
               this.setState({ alertShow: true });

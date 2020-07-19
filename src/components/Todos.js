@@ -40,6 +40,12 @@ class Todos extends Component {
       }
     });
   };
+  increaseTodoCount = () => {
+    this.setState((prevState) => ({
+      notCompletedTodoCount: prevState.notCompletedTodoCount++,
+    }));
+  };
+
   changeActiveTodo = (id) => {
     this.setState({ activeTodoId: id });
   };
@@ -92,7 +98,7 @@ class Todos extends Component {
           <br />
           <Row>
             <Col xs={12} md={{ span: 6, offset: 3 }}>
-              <AddTodo />
+              <AddTodo increaseTodoCount={() => this.increaseTodoCount()} />
             </Col>
           </Row>
           <Row>
