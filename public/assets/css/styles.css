@@ -220,10 +220,12 @@
   border-radius: 20px;
   background-color: #50e3a4;
   color: white;
+  padding: 0;
 }
 #all,#active,#completed{
   cursor: pointer;
   border-radius: 20px;
+  padding: 0;
   
 }
   
