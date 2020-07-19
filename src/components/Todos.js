@@ -189,7 +189,13 @@ class Todos extends Component {
                 <Col id="todoCountContainer" xs={6} md={6}>
                   <Row id="todoCountRow">
                     <div id="todoText">todo</div>
-                    <div id="count">{notCompletedTodoCount}</div>
+                    <div id="count">
+                      {
+                        todos.filter(
+                          (todo) => todo.mail === user.mail && !todo.completed
+                        ).length
+                      }
+                    </div>
                     <div>items left</div>
                   </Row>
                 </Col>
