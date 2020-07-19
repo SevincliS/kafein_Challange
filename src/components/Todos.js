@@ -194,7 +194,7 @@ class Todos extends Component {
                   </Row>
                 </Col>
                 <Col xs={7} md={7}>
-                  <Row id="todoFilterRow" style={{ width: '100%' }}>
+                  <Row id="todoFilterRow">
                     <Col
                       id={
                         selectedFilter === 'allSelected' ? 'allSelected' : 'all'
