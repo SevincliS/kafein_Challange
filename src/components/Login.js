@@ -37,7 +37,7 @@ class Login extends Component {
 
   componentDidMount = () => {
     const { user, history } = this.props;
-    if (user.mail !== undefined) {
+    if (user !== null && user.mail !== undefined) {
       history.push('/todo-list');
     }
   };
