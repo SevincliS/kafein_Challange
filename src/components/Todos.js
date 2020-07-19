@@ -186,21 +186,21 @@ class Todos extends Component {
             <Col xs={12} md={{ span: 6, offset: 3 }}>
               <br />
               <InputGroup id="todoFilter">
-                <Col id="todoCountContainer" xs={5} md={5}>
+                <Col id="todoCountContainer" xs={6} md={6}>
                   <Row id="todoCountRow">
                     <div id="todoText">todo</div>
                     <div id="count">{notCompletedTodoCount}</div>
                     <div>items left</div>
                   </Row>
                 </Col>
-                <Col xs={7} md={7}>
+                <Col xs={6} md={6}>
                   <Row id="todoFilterRow">
                     <Col
                       id={
                         selectedFilter === 'allSelected' ? 'allSelected' : 'all'
                       }
-                      xs={2}
-                      md={2}
+                      xs={1}
+                      md={1}
                       onClick={() => {
                         console.log(selectedFilter);
                         console.log('asdasdds');
@@ -219,8 +219,8 @@ class Todos extends Component {
                           ? 'activeSelected'
                           : 'active'
                       }
-                      xs={4}
-                      md={4}
+                      xs={3}
+                      md={3}
                       onClick={() => {
                         if (selectedFilter === 'activeSelected') {
                           this.setState({ selectedFilter: '' });

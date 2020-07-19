@@ -206,15 +206,14 @@
 #todoText{
   margin-left: 20px;
 }
-#todoCountRow{
-  margin-top: 6px;
-}
 #count{
   color: #50E3A4;
   width: 20px;
 }
-#todoFilterRow{
-  margin-top: 6px;
+#todoFilterRow,#todoCountRow{
+  margin-top: 10px;
+  font-size: 10pt;
+  place-content: center;
 }
 #allSelected,#activeSelected,#completedSelected{
   cursor: pointer;
