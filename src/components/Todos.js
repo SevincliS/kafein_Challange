@@ -19,31 +19,15 @@ class Todos extends Component {
     super(props);
     this.state = {
       activeTodoId: '',
-      notCompletedTodoCount: 0,
       selectedFilter: '',
     };
   }
 
   componentDidMount = () => {
-    const { resetUser, user, history, todos } = this.props;
+    const { resetUser, user, history } = this.props;
     if (user.mail === undefined) {
       resetUser(history);
     }
-
-    let count = 0;
-    todos.map((todo, index) => {
-      if (todos[index].mail === user.mail) {
-        if (!todo.completed) {
-          count++;
-          this.setState({ notCompletedTodoCount: count });
-        }
-      }
-    });
-  };
-  increaseTodoCount = () => {
-    this.setState((prevState) => ({
-      notCompletedTodoCount: prevState.notCompletedTodoCount++,
-    }));
   };
 
   changeActiveTodo = (id) => {
@@ -51,7 +35,7 @@ class Todos extends Component {
   };
 
   render() {
-    const { activeTodoId, notCompletedTodoCount, selectedFilter } = this.state;
+    const { activeTodoId, selectedFilter } = this.state;
     const {
       todos,
       toggleTodo,
@@ -98,7 +82,7 @@ class Todos extends Component {
           <br />
           <Row>
             <Col xs={12} md={{ span: 6, offset: 3 }}>
-              <AddTodo increaseTodoCount={() => this.increaseTodoCount()} />
+              <AddTodo />
             </Col>
           </Row>
           <Row>
@@ -140,9 +124,6 @@ class Todos extends Component {
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     toggleTodo(todo.id);
-                                    this.setState((prevState) => ({
-                                      notCompletedTodoCount: prevState.notCompletedTodoCount++,
-                                    }));
                                   }}
                                   color={'green'}
                                 />
@@ -152,9 +133,6 @@ class Todos extends Component {
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     toggleTodo(todo.id);
-                                    this.setState((prevState) => ({
-                                      notCompletedTodoCount: prevState.notCompletedTodoCount--,
-                                    }));
                                   }}
                                 />
                               )}
