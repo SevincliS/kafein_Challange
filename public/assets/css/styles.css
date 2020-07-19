@@ -1,0 +1,230 @@
+#logo, #img {
+  width: 40vh;
+  height: 20vh;
+  display: block;
+  margin: 0 auto;
+  background-image: url("../images/todo-logo-white.svg");
+  background-repeat: no-repeat;
+  background-size: contain; 
+}
+#app {
+  background-color: #f0efe9;
+  height: 100vh;
+}
+
+#loginBottomGroup{
+  justify-content: space-between;
+}
+#forgotPassword,.form-check-label{
+  color:#d2d0cb
+}
+.form-check{
+  place-self: center;
+}
+
+#loginButton, #addTodoButton,#goBackButton{
+  background-color: #50E3A4;
+  border-color:#50E3A4 ;
+      margin: 0 auto;
+      border-radius: 50px;
+      font-weight: bold;
+      width: 140px;
+      height: 50px;
+      box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.1); 
+}
+#addTodoButton{
+  background-image: url("../images/plus-icon-white.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    border-radius:40px;
+    margin-top: -15px;
+    border-style: solid;
+    border-color: #e5e3da;
+    border-width: thick;
+    position: relative;
+    z-index: 3;
+}
+#goBackButton{
+  background-image: url("../images/goBack-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: -15px;
+    position: relative;
+    z-index: 3;
+}
+#loginInput, #loginPassword,#addTodoInput,#todoDetailsInput, #addtodoInputOpenDetais, #todoListItem,#todoListItemCompleted,#todoDetailsTitle,#todoDetailsDesc{
+  text-indent: 50px;
+      height: 60px;
+      font-size: 14px;
+      color: #999999 !important;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-style: none;
+}
+#todoDetailsTitle,#todoDetailsDesc{
+  background-color: white;
+}
+#todoDetailsTitle{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-style: solid;
+  cursor: pointer;
+}
+
+#todoDetailsDesc{
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 300px;
+  cursor: pointer;
+
+ 
+}
+#todoIndexContainer{
+  width: 250px;
+  text-align: end;
+}
+#todoListItem:first-child,#todoListItemCompleted:first-child{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+#todoListItem:last-child,#todoListItemCompleted:last-child{
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#todoListItem{
+  justify-content: space-between;
+  margin-top:-15px;
+}
+#todoListItem:focus, #todoListItemCompleted:focus{
+  outline: none;
+}
+
+#todoListItemCompleted{
+  justify-content: space-between;
+  margin-top:-15px;
+  text-decoration: line-through;
+}
+#loginInput{
+  border-top-right-radius: 20px;
+}
+#loginPassword{
+  border-bottom-right-radius: 20px;
+}
+#addTodoInput{
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+#todoDetailsInput{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#addtodoInputOpenDetais{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#mailIcon,#keyIcon,#addTodoDetailsIcon, #addTodoCloseDetailsIcon {
+      width: 20px;
+      height: 20px; 
+      place-self: center;  
+      margin: 10px; 
+      fill:#50E3A4;
+      
+}
+#mailIconContainer{
+  background-color: white;
+  border-top-left-radius: 20px;
+ 
+}
+#keyIconContainer{
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  
+}
+#todoIconsContainer{
+  justify-content:space-between;
+  width: 150px;
+}
+#removeTodoIcon{
+  margin-left: 25px;
+}
+#removePlaceholderTodoIcon{
+  margin-left: 25px;
+  fill:white
+}
+
+#addTodoDetailsIconContainer{
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+}
+#addTodoDetailsOpenIconContainer{
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 0px;
+  cursor: pointer;
+
+}
+#logoPersonCircle{
+  place-self: center; 
+  margin-left: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#userNameRow{
+  justify-content: flex-end;
+}
+#logOutText{
+  cursor: pointer;
+}
+#todoFilter{
+  background-color: white;
+   height: 40px;
+   border-radius: 20px;
+}
+#todoCountContainer{
+  border-right-style: solid;
+  border-right-color: #f7f7f4;
+  border-right-width: medium;
+  height: 40px;
+}
+#todoText{
+  margin-left: 30px;
+}
+#todoCountRow{
+  margin-top: 6px;
+}
+#count{
+  color: #50E3A4;
+  width: 20px;
+}
+#todoFilterRow{
+  margin-top: 6px;
+}
+#allSelected,#activeSelected,#completedSelected{
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #50e3a4;
+  color: white;
+}
+#all,#active,#completed{
+  cursor: pointer;
+  border-radius: 20px;
+  
+}
+  
